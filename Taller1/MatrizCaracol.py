@@ -6,8 +6,8 @@ def DisplayVortex(n,matrix,movements=None,contMovements=None,numdirection=0,row=
     #print("Entered")
     #print(f"row:{row}\tcol:{col}")
     #print(f"row:{row}\tcol:{col}\tnumber:{matrix[row][col]}")
-    #print(f"contMovements es: {contMovements}")
-    #print(f"movements es: {movements}")
+    #print(f"contMovements: {contMovements}")
+    #print(f"movements: {movements}")
     #print(array)
     direction = [(1,0),(0,1),(-1,0),(0,-1)]
     if len(array) == n*n:
@@ -26,7 +26,7 @@ def DisplayVortex(n,matrix,movements=None,contMovements=None,numdirection=0,row=
         return DisplayVortex(n,matrix,movements,None,0,row+1,col,array)
     
     if contMovements == movements/2:
-        #print("Entró a el condicional del contador mitad")
+        
         if numdirection == 3:
             numdirection = 0
         else:
@@ -36,7 +36,7 @@ def DisplayVortex(n,matrix,movements=None,contMovements=None,numdirection=0,row=
         return DisplayVortex(n,matrix,movements,contMovements+1,numdirection,row,col,array)
     
     elif contMovements == movements:
-        #print("Entró a el condicional del contador igual")
+        
         if numdirection == 3:
             numdirection = 0
         else:
