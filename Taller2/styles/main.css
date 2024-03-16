@@ -33,7 +33,7 @@ p {
     margin-bottom: 1rem;
 }
 
-section > p {
+section {
     margin-bottom: 50px;
 }
   
@@ -80,6 +80,32 @@ a:hover {
     margin-bottom: 20px;
 }
 
+#img_permutaciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px
+}
+
+#img_permutaciones > div > h4 {
+    margin-bottom: 20px;
+}
+
+#img_variaciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px
+}
+
+#img_variaciones > div > h4 {
+    margin-bottom: 20px;
+}
+
 .latex_img {
     width: 200px;
+}
+
+.img_pequeña {
+    width: 50px
 }

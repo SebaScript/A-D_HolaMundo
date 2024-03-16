@@ -16,7 +16,7 @@
       y combinatoria, incluyendo la permutación, la combinación y otros conceptos importantes. 
       También tendrás acceso a calculadoras para resolver problemas de este tipo.
     </p>
-    <img src="img/dados.png" alt="dados" id = "img_principal">
+    <img src="img/dados.png" alt="imágen dados" id = "img_principal">
     <section>
       <h2>¿Qué es el conteo y la combinatoria?</h2>
       <p>
@@ -90,9 +90,9 @@
       <br>
       - m es el numero total de elementos en el conjunto.
       <br>
-      <br>
       - n es el numero total de elementos que se seleccionan.
-
+      <br>
+      <br>
       Es decir, podemos usar estas formulas siempre que necesitemos contar las combinaciones posibles entre elementos 
       de un conjuno siempre y cuando el orden no importe y no intervengan todos los elementos. Volviendo al ejemplo 
       de la ensalada, teniendo 6 ingredientes pero solo pudiendo seleccionar 3, usamos la formula para casos donde 
@@ -101,11 +101,10 @@
       <br>
       - m = 6
       <br>
-      <br>
       - n = 3
       <br>
       <br>
-      <img src="img/res_comb_1.png" alt="" class="latex_img">
+      <img src="img/res_comb_1.png" alt="resultado problema combinación" class="latex_img">
       <br>
       <br>
       Por lo tanto hay 20 maneras distintas de preparar la ensalada con esas condiciones.
@@ -113,11 +112,94 @@
   </section>
   <section>
     <h2>Permutación</h2>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis quidem neque enim eius facilis necessitatibus et voluptate iure? Dolorem ut quis voluptatum nemo sunt magnam porro explicabo exercitationem ipsam dolor?</p>
+    <p>
+      Una permutación es una agrupación de elementos de un conjunto, pero a diferencia de la combinación, en la permutación 
+      si importa el orden y si entran todos los elementos. Por ejemplo, si estamos en una competencia, no es lo mismo 
+      quedar en el primer puesto que en el segundo o el tercero, entonces el orden si importa y para problemas de 
+      este tipo usamos la permutación, las fórmulas son las siguientes: 
+    </p>
+    <div id = "img_permutaciones">
+      <div>
+        <h4>Hay elementos repetidos</h4>
+        <img src="img/perm_rep.png" alt="permutación con repeticion" class="latex_img">
+      </div>  
+      <div>
+        <h4>No hay elementos repetidos</h4>
+        <img src="img/perm_sin_rep.png" alt="permutación sin repeticion" id="img_pequeña" class="latex_img img_pequeña">
+      </div>
+    </div>
+    <p>
+      Donde:
+      <br>
+      <br>
+      - n es la cantidad total de elementos.
+      <br>
+      - En el caso de que hayan elementos repetidos: a, b, c... son la cantidad de cada elemento repetido.
+      <br>
+      <br>
+      Entonces supongamos que tenemos 6 letras: A, B, B, C, A, A y queremos formar palabras de 6 letras. En este caso 
+      importa el orden ya que, por ejemplo, no es lo mismo BABCAA que ACBABA. En este caso también entran todos los 
+      elementos, por lo que estamos hablando de una permutación con repetición. Aplicando la fórmula correspondiente 
+      obtenemos el siguiente resultado:
+      <br>
+      <br>
+      - n = 6 (número total de letras)
+      <br>
+      - a = 3 (número de veces que se repite la letra A)
+      <br>
+      - b = 2 (número de veces que se repite la letra B)
+      <br>
+      - c = 1 (la C no se repite, así que es 1.)
+      <br>
+      <br>
+      <img src="img/res_perm.png" alt="resultado problema permutación" class="latex_img">
+      <br>
+      <br>
+      Entonces se pueden formar en total 60 palabras distintas. Si tuvieramos el mismo problema pero sin ninguna letra 
+      repetida, entonces simplemente utilizaríamos la fórmula de n! obteniendo un total de 720 palabras distintas.
+    </p>
   </section>
   <section>
     <h2>Variación</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dignissimos ut in, voluptatibus quisquam ipsa dolore culpa repellendus voluptates alias ad omnis, blanditiis reprehenderit perferendis doloribus consequuntur, consectetur incidunt iusto?</p>
+    <p>
+      La variación es bastante similar a la permutación, con la única diferencia de que en la variación no entran todos 
+      los elementos del conjunto. Si tomamos el mismo ejemplo que vimos en la permutación, donde tenemos 6 letras: 
+      A, B, B, C, A, A pero en este caso no queremos formar palabras de 6 letras, sino de 3 letras, entonces debemos 
+      usar la variación y sus fórmulas para resolver el problema ya que no entran todos los elementos. Las fórmulas 
+      son las siguientes:
+    </p>
+    <div id = "img_variaciones">
+      <div>
+        <h4>Hay elementos repetidos</h4>
+        <img src="img/var_rep.png" alt="variación con repetición" class="latex_img img_pequeña">
+      </div>  
+      <div>
+        <h4>No hay elementos repetidos</h4>
+        <img src="img/var_sin_rep.png" alt="variación sin repetición" id="img_pequeña" class="latex_img">
+      </div>
+    </div>
+    <p>
+      Donde:
+      <br>
+      <br>
+      - m es el número total de elementos.
+      <br>
+      - n es el número de elementos a seleccionar.
+      <br>
+      <br>
+      Entonces para resolver el problema, usamos la fórmula de variación para elementos repetidos de esta manera: 
+      <br>
+      <br>
+      - m es el número total de letras (6).
+      <br>
+      - n es el número de letras que vamos a seleccionar (3).
+      <br>
+      <br>
+      <img src="img/res_var.png" alt="resultado problema variación" class="latex_img">
+      <br>
+      <br>
+      Por lo tanto podemos formar 216 palabras distintas de 3 letras con las 6 letras A, B, B, C, A, A.
+    </p>
   </section>
   <section>
     <h2>Calculadoras</h2>
