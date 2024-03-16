@@ -8,14 +8,19 @@
 </head>
 <body>
   <header>
-    <h1>Principios de conteo, permutaciones y combinaciones</h1>
+    <h1>Principios de conteo y combinatoria</h1>
   </header>
   <main>
-    <p>Esta página web te ayudará a comprender los principios básicos de las principales técnicas de conteo, incluyendo la permutación, la combinación y otros conceptos importantes. También tendrás acceso a calculadoras para resolver problemas de este tipo.</p>
-    <img src="img/dados.png" alt="dados">
+    <p>
+      Esta página web te ayudará a comprender los principios básicos de las principales técnicas de conteo
+      y combinatoria, incluyendo la permutación, la combinación y otros conceptos importantes. 
+      También tendrás acceso a calculadoras para resolver problemas de este tipo.
+    </p>
+    <img src="img/dados.png" alt="dados" id = "img_principal">
     <section>
-      <h2>¿Qué es el conteo?</h2>
-      <p>Es un conjunto de técnicas usadas para determinar el número total de resultados que pueden haber 
+      <h2>¿Qué es el conteo y la combinatoria?</h2>
+      <p>
+        Son un conjunto de técnicas usadas para determinar el número total de resultados que pueden haber 
         a partir de hacer combinaciones en uno o varios conjuntos de elementos. Estas tecnicas son usadas 
         cuando es dificil contar manualmente las combinaciones posibles de un conjunto de elementos.
         <br>
@@ -25,42 +30,108 @@
         parquearlos de 6 maneras distintas. Ahora bien, si en vez de 3 carros tenemos 6, el número de combinaciones 
         posibles sube hasta 144, así que podemos ver que para la mayoría de problemas resulta necesario alguna
         técnica que nos permita contar el número de combinaciones posibles de una manera más fácil y rapida. Para esto 
-        utilizaremos las tecnicas de conteo.
+        utilizaremos las tecnicas de conteo y combinatoria.
       </p>
     </section>
     <section>
         <h2>Principio multiplicativo</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, at magni! Sunt tempora aliquam minima neque eligendi est dolore eum veritatis fugiat dolorem ipsam quae corporis, temporibus ea velit eaque.</p>
+        <p>
+          Cuando tenemos 2 o más sucesos que pueden ocurrir de varias formas, pero que no dependen el uno del otro
+          y que pueden ocurrir al mismo tiempo, usamos el principio multiplicativo. Si tenemos un suceso S1 que 
+          puede ocurrir de distintas maneras y un suceso S2 que puede ocurrir de otras tantas maneras, independientemente 
+          el uno del otro y al mismo tiempo, entonces los sucesos conjuntamente pueden ocurrir de S1 × S2 formas distintas.
+          <br>
+          <br>
+          Supongamos que tenemos 2 dados y queremos saber cuantas combinaciones posibles podemos obtener al 
+          lanzarlos al mismo tiempo. Es claro que el resultado de un dado no depende del otro y por lo tanto son 
+          sucesos independientes, entonces multiplicamos los 6 resultados posibles del primer dado por los 6 
+          resultados posibles del segundo dado, teniendo un resultado de 36 combinaciones distintas posibles.
+        </p>
     </section>
     <section>
       <h2>Principio aditivo</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, at magni! Sunt tempora aliquam minima neque eligendi est dolore eum veritatis fugiat dolorem ipsam quae corporis, temporibus ea velit eaque.</p>
+      <p>
+        En este caso, a diferencia del principio multiplicativo, el principio aditivo se usa cuando tenemos 2 o más 
+        sucesos que pueden ocurrir de varias formas, que sí dependen de alguna manera el uno del otro y que no pueden 
+        ocurrir al mismo tiempo, es decir, que son excluyentes.
+        <br>
+        <br>
+        Un ejemplo para diferenciar el principio aditivo del multiplicativo es el siguiente: si tienes 3 camisetas 
+        y 3 pantalones, puedes combinarlos de 9 maneras distintas ya que usamos una camiseta y un pantalón al mismo 
+        tiempo, por lo que usamos el principio multiplicativo para determinar las posibles combinaciones. 
+        Ahora, si tienes 3 zapatos y 3 chanclas, te puedes calzar de 6 maneras distintas ya que no se pueden usar 
+        zapatos y chanclas a la vez (en teoría), por lo que en este caso usamos el principio aditivo 
+        para contar las distintas posibilidades.
+      </p>
   </section>
-    <section>
-        <h2>Permutación</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore, veritatis eius iste nisi provident animi unde sapiente, harum debitis ratione et. Sint dolore commodi deserunt facere est magni esse! Mollitia.</p>
-    </section>
-    <section>
-        <h2>Combinación</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis nihil impedit repellat repudiandae sequi ipsum quas minima culpa voluptatibus libero, accusamus, provident expedita molestiae maxime illo veniam obcaecati, delectus ipsa!</p>
-    </section>
-    <section>
-        <h2>Variación</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dignissimos ut in, voluptatibus quisquam ipsa dolore culpa repellendus voluptates alias ad omnis, blanditiis reprehenderit perferendis doloribus consequuntur, consectetur incidunt iusto?</p>
-    </section>
-    <section>
-      <h2>Calculadoras</h2>
-      <p>Utiliza las siguientes calculadoras para ayudarte a resolver problemas de conteo:</p>
-      <ul>
-        <li><a href="calculadora_conteo.html">Calculadora de principios de conteo</a></li>
-        <li><a href="calculadora_permutacion.html">Calculadora de permutación</a></li>
-        <li><a href="calculadora_combinacion.html">Calculadora de combinación</a></li>
-        <li><a href="calculadora_combinacion.html">Calculadora de variación</a></li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <p>Hola Mundo &copy 2024</p>
-  </footer>
+  <section>
+    <h2>Combinación</h2>
+    <p>
+      Una combinación es una agrupación de elementos de un conjunto sin importar el orden. Por ejemplo, si vamos a 
+      hacer una ensalada con tomate, lechuga y cebolla, no importa el orden en el que añadamos los ingredientes ya 
+      que el resultado va a ser el mismo.
+
+      Ahora bien, si tenemos 6 ingredientes, pero solo podemos usar 3, podemos contar el número de combinaciones 
+      posibles haciendo uso de las 2 siguientes formulas: 
+    </p>
+    <div id = "img_combinaciones">
+      <div>
+        <h4>Hay elementos repetidos</h4>
+        <img src="img/comb_rep.png" alt="combinacion con repeticion" class="latex_img">
+      </div>  
+      <div>
+        <h4>No hay elementos repetidos</h4>
+        <img src="img/comb_sin_rep.png" alt="combinacion sin repeticion" class="latex_img">
+      </div>
+    </div>
+    <p>
+      Donde:
+      <br>
+      <br>
+      - m es el numero total de elementos en el conjunto.
+      <br>
+      <br>
+      - n es el numero total de elementos que se seleccionan.
+
+      Es decir, podemos usar estas formulas siempre que necesitemos contar las combinaciones posibles entre elementos 
+      de un conjuno siempre y cuando el orden no importe y no intervengan todos los elementos. Volviendo al ejemplo 
+      de la ensalada, teniendo 6 ingredientes pero solo pudiendo seleccionar 3, usamos la formula para casos donde 
+      no hay elementos repetidos ya que los ingredientes son distintos. Así quedaría la fórmula:
+      <br>
+      <br>
+      - m = 6
+      <br>
+      <br>
+      - n = 3
+      <br>
+      <br>
+      <img src="img/res_comb_1.png" alt="" class="latex_img">
+      <br>
+      <br>
+      Por lo tanto hay 20 maneras distintas de preparar la ensalada con esas condiciones.
+    </p>
+  </section>
+  <section>
+    <h2>Permutación</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis quidem neque enim eius facilis necessitatibus et voluptate iure? Dolorem ut quis voluptatum nemo sunt magnam porro explicabo exercitationem ipsam dolor?</p>
+  </section>
+  <section>
+    <h2>Variación</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dignissimos ut in, voluptatibus quisquam ipsa dolore culpa repellendus voluptates alias ad omnis, blanditiis reprehenderit perferendis doloribus consequuntur, consectetur incidunt iusto?</p>
+  </section>
+  <section>
+    <h2>Calculadoras</h2>
+    <p>Utiliza las siguientes calculadoras para ayudarte a resolver problemas de conteo:</p>
+    <ul id = "calculadoras">
+      <li><a href="calculadora_conteo.html">Calculadora de principios de conteo</a></li>
+      <li><a href="calculadora_permutacion.html">Calculadora de permutación</a></li>
+      <li><a href="calculadora_combinacion.html">Calculadora de combinación</a></li>
+      <li><a href="calculadora_combinacion.html">Calculadora de variación</a></li>
+    </ul>
+  </section>
+</main>
+<footer>
+  <p>Hola Mundo &copy 2024</p>
+</footer>
 </body>
 </html>
