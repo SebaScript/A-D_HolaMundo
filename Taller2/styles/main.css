@@ -127,6 +127,7 @@ a:hover {
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
 }
 .calc button:hover {
     background-color: #45a049;
