@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Principios de conteo y combinatoria</title>
   <link rel="stylesheet" href="styles/main.css">
-  <script src="index.js"></script>
+  <script src="index.js" type="module"></script>
 </head>
 <body>
   <header>
@@ -247,14 +247,14 @@
             <img src="img/perm_rep.png" alt="permutación con repeticion" class="latex_img">
             <input type="number" id="n_perm_rep" name="n" placeholder="Ingresa el número 'n'">
             <input type="text" id="numeros_perm_rep" name="numeros" placeholder="a,b,c,..">
-            <button onclick="calcular()">Calcular</button>
+            <button id="btn_perm_con_rep" >Calcular</button>
             <p>Resultado: <strong><span id="res_perm_rep"></span></strong></p>
           </div>  
           <div>
             <h4>No hay elementos repetidos</h4>
             <img src="img/perm_sin_rep.png" alt="permutación sin repeticion" class="latex_img img_pequeña">
             <input type="number" id="n_perm_sin_rep" name="n" placeholder="Ingresa el número 'n'">
-            <button onclick="calcular()">Calcular</button>
+            <button id="btn_perm_sin_rep">Calcular</button>
             <p>Resultado: <strong><span id="res_perm_sin_rep"></span></strong></p>
           </div>
         </div>
