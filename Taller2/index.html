@@ -205,96 +205,130 @@
   <section>
     <h2>Calculadoras</h2>
     <p>Utiliza las siguientes calculadoras para ayudarte a resolver problemas de conteo y combinatoria:</p>
-      <section>
-        <h2>Calculadora de combinación</h2>
-        <p>
-          Si tienes un problema donde no importa el orden de los elementos y no entran todos los elementos, usa 
-          esta calculadora:
-        </p>
-        <div class="calc">
-          <div>
-            <h4>Hay elementos repetidos</h4>
-            <img src="img/comb_rep.png" alt="combinacion con repeticion" class="latex_img">
-            <input type="number" id="m_comb_rep" name="m" placeholder="Ingresa el número 'm'">
-            <input type="number" id="n_comb_rep" name="n" placeholder="Ingresa el número 'n'">
-            <button onclick="calcular()">Calcular</button>
-            <p>Resultado: <strong><span id="res_comb_rep"></span></strong></p>
-          </div>  
-          <div>
-            <h4>No hay elementos repetidos</h4>
-            <img src="img/comb_sin_rep.png" alt="combinacion sin repeticion" class="latex_img">
-            <input type="number" id="m_comb_sin_rep" name="m" placeholder="Ingresa el número 'm'">
-            <input type="number" id="n_comb_sin_rep" name="n" placeholder="Ingresa el número 'n'">
-            <button onclick="calcular()">Calcular</button>
-            <p>Resultado: <strong><span id="res_comb_sin_rep"></span></strong></p>
-          </div>
+    <section>
+      <h2>Calculadora de combinación</h2>
+       <p>
+        Si tienes un problema donde no importa el orden de los elementos y no entran todos los elementos, usa 
+        esta calculadora:
+      </p>
+      <div class="calc">
+        <div>
+          <h4>Hay elementos repetidos</h4>
+          <img src="img/comb_rep.png" alt="combinacion con repeticion" class="latex_img">
+          <input type="number" id="m_comb_rep" name="m" placeholder="Ingresa el número 'm'">
+          <input type="number" id="n_comb_rep" name="n" placeholder="Ingresa el número 'n'">
+          <button id="btn_comb_rep">Calcular</button>
+          <p>Resultado: <strong><span id="res_comb_rep"></span></strong></p>
+        </div>  
+        <div>
+          <h4>No hay elementos repetidos</h4>
+          <img src="img/comb_sin_rep.png" alt="combinacion sin repeticion" class="latex_img">
+          <input type="number" id="m_comb_sin_rep" name="m" placeholder="Ingresa el número 'm'">
+          <input type="number" id="n_comb_sin_rep" name="n" placeholder="Ingresa el número 'n'">
+          <button id="btn_comb_sin_rep">Calcular</button>
+          <p>Resultado: <strong><span id="res_comb_sin_rep"></span></strong></p>
         </div>
-        <p>
-          - m es el numero total de elementos en el conjunto.
-          <br>
-          - n es el numero total de elementos que se seleccionan.
-        </p>
-      </section>
-      <section>
-        <h2>Calculadora de permutación</h2>
-        <p>
-          Si tienes un problema donde si importa el orden de los elementos y si entran todos los elementos, usa 
-          esta calculadora:
-        </p>
-        <div class="calc">
-          <div>
-            <h4>Hay elementos repetidos</h4>
-            <img src="img/perm_rep.png" alt="permutación con repeticion" class="latex_img">
-            <input type="number" id="n_perm_rep" name="n" placeholder="Ingresa el número 'n'">
-            <input type="text" id="numeros_perm_rep" name="numeros" placeholder="a,b,c,..">
-            <button id="btn_perm_con_rep" >Calcular</button>
-            <p>Resultado: <strong><span id="res_perm_rep"></span></strong></p>
-          </div>  
-          <div>
-            <h4>No hay elementos repetidos</h4>
-            <img src="img/perm_sin_rep.png" alt="permutación sin repeticion" class="latex_img img_pequeña">
-            <input type="number" id="n_perm_sin_rep" name="n" placeholder="Ingresa el número 'n'">
-            <button id="btn_perm_sin_rep">Calcular</button>
-            <p>Resultado: <strong><span id="res_perm_sin_rep"></span></strong></p>
-          </div>
-        </div>
-        <p>
-          - n es el numero total de elementos en el conjunto.
-          <br>
-          - En el caso de haber elementos repetidos: a,b,c,... son la cantidad de veces que se repite cada elemento. 
-          Ingresa cada número separado por comas y sin espacios.
-        </p>
-      </section>
-      <section>
-        <h2>Calculadora de variación</h2>
-        <p>
-          Si tienes un problema donde si importa el orden de los elementos y no entran todos los elementos, usa 
-          esta calculadora:
-        </p>
-        <div class="calc">
-          <div>
-            <h4>Hay elementos repetidos</h4>
-            <img src="img/var_rep.png" alt="variación con repetición" class="latex_img img_pequeña">
-            <input type="number" id="m_var_rep" name="m" placeholder="Ingresa el número 'm'">
-            <input type="number" id="n_var_rep" name="n" placeholder="Ingresa el número 'n'">
-            <button onclick="calcular()">Calcular</button>
-            <p>Resultado: <strong><span id="res_var_rep"></span></strong></p>
-          </div>  
-          <div>
-            <h4>No hay elementos repetidos</h4>
-            <img src="img/var_sin_rep.png" alt="variación sin repetición" class="latex_img">
-            <input type="number" id="m_var_sin_rep" name="m" placeholder="Ingresa el número 'm'">
-            <input type="number" id="n_var_sin_rep" name="n" placeholder="Ingresa el número 'n'">
-            <button onclick="calcular()">Calcular</button>
-            <p>Resultado: <strong><span id="res_var_sin_rep"></span></strong></p>
-          </div>
-        </div>
-        <p>
-        - m es el número total de elementos.
+      </div>
+      <p>
+        - m es el numero total de elementos en el conjunto.
         <br>
-        - n es el número de elementos a seleccionar.
-        </p>
-      </section>
+        - n es el numero total de elementos que se seleccionan.
+      </p>
+    </section>
+    <section>
+      <h2>Calculadora de permutación</h2>
+      <p>
+        Si tienes un problema donde si importa el orden de los elementos y si entran todos los elementos, usa 
+        esta calculadora:
+      </p>
+      <div class="calc">
+        <div>
+          <h4>Hay elementos repetidos</h4>
+          <img src="img/perm_rep.png" alt="permutación con repeticion" class="latex_img">
+          <input type="number" id="n_perm_rep" name="n" placeholder="Ingresa el número 'n'">
+          <input type="text" id="numeros_perm_rep" name="numeros" placeholder="a,b,c,..">
+          <button id="btn_perm_con_rep" >Calcular</button>
+          <p>Resultado: <strong><span id="res_perm_rep"></span></strong></p>
+        </div>  
+        <div>
+          <h4>No hay elementos repetidos</h4>
+          <img src="img/perm_sin_rep.png" alt="permutación sin repeticion" class="latex_img img_pequeña">
+          <input type="number" id="n_perm_sin_rep" name="n" placeholder="Ingresa el número 'n'">
+          <button id="btn_perm_sin_rep">Calcular</button>
+          <p>Resultado: <strong><span id="res_perm_sin_rep"></span></strong></p>
+        </div>
+      </div>
+      <p>
+        - n es el numero total de elementos en el conjunto.
+        <br>
+        - En el caso de haber elementos repetidos: a,b,c,... son la cantidad de veces que se repite cada elemento. 
+        Ingresa cada número separado por comas y sin espacios.
+      </p>
+    </section>
+    <section>
+      <h2>Calculadora de variación</h2>
+      <p>
+        Si tienes un problema donde si importa el orden de los elementos y no entran todos los elementos, usa 
+        esta calculadora:
+      </p>
+      <div class="calc">
+        <div>
+          <h4>Hay elementos repetidos</h4>
+          <img src="img/var_rep.png" alt="variación con repetición" class="latex_img img_pequeña">
+          <input type="number" id="m_var_rep" name="m" placeholder="Ingresa el número 'm'">
+          <input type="number" id="n_var_rep" name="n" placeholder="Ingresa el número 'n'">
+          <button id="btn_var_rep">Calcular</button>
+          <p>Resultado: <strong><span id="res_var_rep"></span></strong></p>
+        </div>  
+        <div>
+          <h4>No hay elementos repetidos</h4>
+          <img src="img/var_sin_rep.png" alt="variación sin repetición" class="latex_img">
+          <input type="number" id="m_var_sin_rep" name="m" placeholder="Ingresa el número 'm'">
+          <input type="number" id="n_var_sin_rep" name="n" placeholder="Ingresa el número 'n'">
+          <button id="btn_var_sin_rep">Calcular</button>
+          <p>Resultado: <strong><span id="res_var_sin_rep"></span></strong></p>
+        </div>
+      </div>
+      <p>
+      - m es el número total de elementos.
+      <br>
+      - n es el número de elementos a seleccionar.
+      </p>
+    </section>
+    <section>
+      <h2>Calculadora de principio multiplicativo</h2>
+       <p>
+        Si tienes un problema donde ocurren 2 o más sucesos que ocurren al mismo tiempo y que no 
+        dependen el uno del otro, usa esta cauculadora:
+      </p>
+      <div class="calc">
+        <div>
+          <input type="text" id="numeros_perm_rep" name="numeros" placeholder="a,b,c,..">
+          <button id="btn_prin_multiplicativo" >Calcular</button>
+          <p>Resultado: <strong><span id="res_perm_rep"></span></strong></p>
+        </div>
+      </div>
+      <p>
+        - a,b,c,... son las distintas posibilidades de cada uno de los sucesos.
+      </p>
+    </section>
+    <section>
+      <h2>Calculadora de principio aditivo</h2>
+       <p>
+        Si tienes un problema donde ocurren 2 o más sucesos que sí dependen de alguna manera el uno del otro 
+        y que no pueden ocurrir al mismo tiempo, usa esta calculadora:
+      </p>
+      <div class="calc">
+        <div>
+          <input type="text" id="numeros_perm_rep" name="numeros" placeholder="a,b,c,..">
+          <button id="btn_prin_aditivo" >Calcular</button>
+          <p>Resultado: <strong><span id="res_perm_rep"></span></strong></p>
+        </div>
+      </div>
+      <p>
+        - a,b,c,... son las distintas posibilidades de cada uno de los sucesos.
+      </p>
+    </section>
   </section>
 </main>
 <footer>
