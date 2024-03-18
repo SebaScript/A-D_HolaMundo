@@ -49,41 +49,41 @@ document.getElementById("btn_prin_multiplicativo").addEventListener('click', fun
 //Calculadora Combinación con repetición
 document.getElementById("btn_comb_rep").addEventListener('click', function combinacionRep(){
 
-    let m = parseInt(document.getElementById("m_comb_rep").value);
+    let m = parseInt(document.getElementById("m_comb_rep").value); //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
     
 
-    let n = parseInt(document.getElementById("n_comb_rep").value);
+    let n = parseInt(document.getElementById("n_comb_rep").value); //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
 
 
-    let resultado = combinacionesConRepeticion(m, n)
+    let resultado = combinacionesConRepeticion(m, n) //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
 
-    document.getElementById("res_comb_rep").textContent = resultado;
+    document.getElementById("res_comb_rep").textContent = resultado; //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
 })
 
 
 //Calculadora Combinación sin repetición
 document.getElementById("btn_comb_sin_rep").addEventListener('click', function combinaciondSinRep(){
 
-    let m = parseInt(document.getElementById("m_comb_sin_rep").value);
+    let m = parseInt(document.getElementById("m_comb_sin_rep").value); //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
 
-    let n = parseInt(document.getElementById("n_comb_sin_rep").value);
+    let n = parseInt(document.getElementById("n_comb_sin_rep").value); //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
 
-    let resultado = combinacionesSinRepeticion(m, n)
+    let resultado = combinacionesSinRepeticion(m, n) //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
 
-    document.getElementById("res_comb_sin_rep").textContent = resultado;
+    document.getElementById("res_comb_sin_rep").textContent = resultado; //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
 })
 
 // Calculadora variacion con repetición
 
 document.getElementById("btn_var_rep").addEventListener('click', function variacionRep(){
 
-    let m = parseInt(document.getElementById("m_var_rep").value);
+    let m = parseInt(document.getElementById("m_var_rep").value); //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
 
-    let n = parseInt(document.getElementById("n_var_rep").value);
+    let n = parseInt(document.getElementById("n_var_rep").value); //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
 
-    let resultado = variacionRepetida(m, n)
+    let resultado = variacionRepetida(m, n) //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
 
-    document.getElementById("res_var_rep").textContent = resultado;
+    document.getElementById("res_var_rep").textContent = resultado; //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
 })
 
 
@@ -93,11 +93,11 @@ document.getElementById("btn_var_rep").addEventListener('click', function variac
 
 document.getElementById("btn_var_sin_rep").addEventListener('click', function variacionSinRep(){
 
-    let m = parseInt(document.getElementById("m_var_sin_rep").value);
+    let m = parseInt(document.getElementById("m_var_sin_rep").value); //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
 
-    let n = parseInt(document.getElementById("n_var_sin_rep").value);
+    let n = parseInt(document.getElementById("n_var_sin_rep").value); //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
 
-    let resultado = variacionNoRepetida(m, n)
+    let resultado = variacionNoRepetida(m, n) //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
 
-    document.getElementById("res_var_sin_rep").textContent = resultado;
+    document.getElementById("res_var_sin_rep").textContent = resultado; //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
 })
