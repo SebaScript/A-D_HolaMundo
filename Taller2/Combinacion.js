@@ -1,12 +1,16 @@
 const { factorial } = require('./factorial.js');
 
-// Función para calcular las combinaciones con repetición
-function combinacionesConRepeticion(n, r) {
-    return factorial(m + n - 1) / (factorial(n) * factorial(m - 1));
+function combinacionesConRepeticion(m, n) {
+    //combinaciones con repetición
+    return factorial(m + n - 1) / (factorial(n) * factorial(m - 1)); // Complejidad en tiempo: O(n); Complejidad Espacial: O(1)
 }
+// Ecuación: 3 O(n) + O(1)
+// O(n)
 
 
-// Función para calcular las combinaciones sin repetición
-function combinacionesSinRepeticion(n, r) {
-    return factorial(m) / (factorial(n) * factorial(m - n));
+function combinacionesSinRepeticion(m, n) {
+    //combinaciones sin repetición
+    return factorial(m) / (factorial(n) * factorial(m - n)); // Complejidad en tiempo: O(n); Complejidad Espacial: O(1)
 }
+// Ecuación: 3 O(n) + O(1)
+// O(n)
