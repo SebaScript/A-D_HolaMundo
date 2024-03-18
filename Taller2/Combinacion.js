@@ -1,6 +1,6 @@
-const { factorial } = require('./factorial.js');
+import { factorial } from "./factorial.js";
 
-function combinacionesConRepeticion(m, n) {
+export function combinacionesConRepeticion(m, n) {
     //combinaciones con repetición
     return factorial(m + n - 1) / (factorial(n) * factorial(m - 1)); // Complejidad en tiempo: O(n); Complejidad Espacial: O(1)
 }
@@ -8,7 +8,7 @@ function combinacionesConRepeticion(m, n) {
 // O(n)
 
 
-function combinacionesSinRepeticion(m, n) {
+export function combinacionesSinRepeticion(m, n) {
     //combinaciones sin repetición
     return factorial(m) / (factorial(n) * factorial(m - n)); // Complejidad en tiempo: O(n); Complejidad Espacial: O(1)
 }
