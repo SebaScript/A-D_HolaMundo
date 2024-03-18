@@ -3,6 +3,7 @@ import {permutacionRepetida} from "./permutacion.js";
 import {principioAditivo} from "./PrincipioAditivo.js";
 import { principioMultiplicativo } from "./PrincipioMultiplicativo.js";
 import {combinacionesConRepeticion, combinacionesSinRepeticion} from "./Combinacion.js"
+import { variacionNoRepetida, variacionRepetida } from "./Variacion.js";
 
 // Calculadora de permutación sin repetición
 document.getElementById('btn_perm_sin_rep').addEventListener('click', function PermutacionSinRep() {
@@ -56,7 +57,7 @@ document.getElementById("btn_comb_rep").addEventListener('click', function combi
 
     let resultado = combinacionesConRepeticion(m, n)
 
-    document.getElementById("res_comb_rep").textContent = resultado; //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
+    document.getElementById("res_comb_rep").textContent = resultado;
 })
 
 
@@ -69,7 +70,7 @@ document.getElementById("btn_comb_sin_rep").addEventListener('click', function c
 
     let resultado = combinacionesSinRepeticion(m, n)
 
-    document.getElementById("res_comb_sin_rep").textContent = resultado; //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
+    document.getElementById("res_comb_sin_rep").textContent = resultado;
 })
 
 // Calculadora variacion con repetición
@@ -80,9 +81,9 @@ document.getElementById("btn_var_rep").addEventListener('click', function variac
 
     let n = parseInt(document.getElementById("n_var_rep").value);
 
-    let resultado 
+    let resultado = variacionRepetida(m, n)
 
-    document.getElementById("res_var_rep").textContent = resultado; //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
+    document.getElementById("res_var_rep").textContent = resultado;
 })
 
 
@@ -96,7 +97,7 @@ document.getElementById("btn_var_sin_rep").addEventListener('click', function va
 
     let n = parseInt(document.getElementById("n_var_sin_rep").value);
 
-    let resultado 
+    let resultado = variacionNoRepetida(m, n)
 
-    document.getElementById("res_var_sin_rep").textContent = resultado; //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
+    document.getElementById("res_var_sin_rep").textContent = resultado;
 })
