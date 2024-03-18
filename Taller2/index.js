@@ -71,3 +71,32 @@ document.getElementById("btn_comb_sin_rep").addEventListener('click', function c
 
     document.getElementById("res_comb_sin_rep").textContent = resultado; //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
 })
+
+// Calculadora variacion con repetición
+
+document.getElementById("btn_var_rep").addEventListener('click', function variacionRep(){
+
+    let m = parseInt(document.getElementById("m_var_rep").value);
+
+    let n = parseInt(document.getElementById("n_var_rep").value);
+
+    let resultado 
+
+    document.getElementById("res_var_rep").textContent = resultado; //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
+})
+
+
+
+// Calculadora variacion sin repetición
+
+
+document.getElementById("btn_var_sin_rep").addEventListener('click', function variacionSinRep(){
+
+    let m = parseInt(document.getElementById("m_var_sin_rep").value);
+
+    let n = parseInt(document.getElementById("n_var_sin_rep").value);
+
+    let resultado 
+
+    document.getElementById("res_var_sin_rep").textContent = resultado; //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
+})
