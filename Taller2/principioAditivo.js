@@ -1,12 +1,5 @@
-import { contieneNoNumerico } from "./permutacion.js";
-
 export function principioAditivo(numeros){ //Complejidad en tiempo de la función: O(n);
     let listaNumeros = numeros.split(",").map(numero => parseInt(numero)); //Complejidad en tiempo: O(1); Complejidad Espacial O(n)
-
-    if (contieneNoNumerico(listaNumeros)){ //Complejidad en tiempo: O(1)
-
-        return "Error, ingresaste un valor no numérico"//Complejidad en tiempo: O(1)
-    }
 
     let total = 0; //Complejidad en tiempo: O(1); Complejidad Espacial O(1)
 
