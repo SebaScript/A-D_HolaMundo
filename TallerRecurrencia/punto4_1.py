@@ -31,10 +31,10 @@ except RecursionError:
 
 def punto_4_1_no_recursivo(n):
     
-    resultado = (Decimal(12/7) * (Decimal(-1) ** Decimal(n)) + (Decimal(16/7) * Decimal(6) ** Decimal(n)))
+    resultado = (12/7 * (mpz(-1) ** (n)) + ((16/7) * mpz(6) ** (n)))
 
     # Se hace esta comprobación ya que el módulo Decimal a veces retorna valores incorrectos demasiado cercanos al número esperado
-    if (resultado - Decimal(0.00000001)) < resultado or (resultado + Decimal(0.00000001)) > resultado:
+    if (resultado - (0.00000001)) < resultado or (resultado + (0.00000001)) > resultado:
         return ceil(resultado)
     
     return resultado

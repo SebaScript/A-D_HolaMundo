@@ -11,11 +11,11 @@ def punto_1_a_recursivo(n):
 
 try:
     # Ingresar n
-    n: int = 3
+    n: int = 100
     if n < 0:
         print("n debe ser mayor o igual a cero")
     else:
-        print("1) a) Recursivo: ", punto_1_a_recursivo(n)) # 250
+        print("1) a) Recursivo: ", punto_1_a_recursivo(n)) # 15777218104420236108234571305655724593464128702180460095405578613281250
 except TypeError:
     print("Ingrese un n entero positivo mayor o igual que cero")
 except RecursionError:
@@ -40,10 +40,10 @@ def punto_1_a_no_recursivo(n):
 
 try:
     # Ingresar n
-    n: int = 3
+    n: int = 100
     if n < 0:
         print("n debe ser mayor o igual a cero")
     else:
-        print("1) a) No recursivo: ", punto_1_a_no_recursivo(n)) # 250
+        print("1) a) No recursivo: ", punto_1_a_no_recursivo(n)) # 577721810442023610823457131E+70
 except TypeError:
     print("Ingrese un n entero positivo mayor o igual que cero")
