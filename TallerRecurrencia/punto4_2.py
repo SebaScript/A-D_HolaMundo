@@ -1,3 +1,4 @@
+from gmpy2 import mpz
 from decimal import Decimal
 from math import ceil
 
@@ -31,10 +32,10 @@ except RecursionError:
 
 def punto_4_2_no_recursivo(n):
     
-    resultado = (Decimal(56/9) * (Decimal(1/2) ** Decimal(n)) + (Decimal(16/9) * Decimal(5) ** Decimal(n)))
+    resultado = ((56/9) * (mpz(1/2) ** (n)) + ((16/9) * mpz(5) ** (n)))
 
     # Se hace esta comprobación ya que el módulo Decimal a veces retorna valores incorrectos demasiado cercanos al número esperado
-    if (resultado - Decimal(0.00000001)) < resultado or (resultado + Decimal(0.00000001)) > resultado:
+    if (resultado - 0.00000001) < resultado or (resultado + 0.00000001) > resultado:
         return ceil(resultado)
     
     return resultado
