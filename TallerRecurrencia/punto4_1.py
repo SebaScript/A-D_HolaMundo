@@ -37,7 +37,7 @@ except RecursionError:
 def punto_4_1_no_recursivo(n):
     
     if n > 1000:
-        resultado = ceil(12/7 * (mpz(-1) ** (n)) + ((16/7) * (mpz(6) ** (n))))
+        resultado = (12/7 * (mpz(-1) ** (n)) + ((16/7) * (mpz(6) ** (n))))
 
     else:
         resultado = ceil(12/7 * ((-1) ** (n)) + ((16/7) * ((6) ** (n))))
