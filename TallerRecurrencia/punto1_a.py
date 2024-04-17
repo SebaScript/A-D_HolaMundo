@@ -44,6 +44,6 @@ try:
     if n < 0:
         print("n debe ser mayor o igual a cero")
     else:
-        print("1) a) No recursivo: ", punto_1_a_no_recursivo(n)) # 577721810442023610823457131E+70
+        print("1) a) No recursivo: ", punto_1_a_no_recursivo(n)) # 1.577721810442023610823457131E+70
 except TypeError:
     print("Ingrese un n entero positivo mayor o igual que cero")

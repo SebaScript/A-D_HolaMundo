@@ -1,7 +1,10 @@
-from decimal import Decimal
-from math import ceil
+from gmpy2 import mpz # pip install gmpy2
+from math import ceil 
 
 # N SIEMPRE DEBE SER MAYOR O IGUAL A 2
+
+# Las posibles minimas diferencias entre el resultado de la función recursiva y la no recursiva
+# Se deben a que la elevacion en python pierde precision cada que el exponente va aumentando.
 
 # Punto 4) 1) recursivo
 
@@ -21,21 +24,23 @@ try:
     if n < 2:
         print("n debe ser mayor o igual a dos")
     else:
-        print("4) 1) Recursivo: ", punto_4_1_recursivo(n)) # 2964
+        print("4) 1) Recursivo (n = 4): ", punto_4_1_recursivo(n)) # 2964
 except TypeError:
     print("Ingrese un n entero positivo mayor o igual que dos")
 except RecursionError:
     print("Se ha ingresado un numero muy grande que supera la profundidad de recursión")
 
+
+
 # Punto 4) 1) no recursivo
 
 def punto_4_1_no_recursivo(n):
     
-    resultado = (12/7 * (mpz(-1) ** (n)) + ((16/7) * mpz(6) ** (n)))
+    if n > 1000:
+        resultado = ceil(12/7 * (mpz(-1) ** (n)) + ((16/7) * (mpz(6) ** (n))))
 
-    # Se hace esta comprobación ya que el módulo Decimal a veces retorna valores incorrectos demasiado cercanos al número esperado
-    if (resultado - (0.00000001)) < resultado or (resultado + (0.00000001)) > resultado:
-        return ceil(resultado)
+    else:
+        resultado = ceil(12/7 * ((-1) ** (n)) + ((16/7) * ((6) ** (n))))
     
     return resultado
 
@@ -46,8 +51,9 @@ try:
     if n < 2:
         print("n debe ser mayor o igual a dos")
     else:
-        print("4) 1) No recursivo: ", punto_4_1_no_recursivo(n)) # 2964
+        print("4) 1) No recursivo (n = 4): ", punto_4_1_no_recursivo(n)) # 2964
 except TypeError:
     print("Ingrese un n entero positivo mayor o igual que dos")
 
-# FALTA AGREGAR PARA n = 151’145.018.
+#Se demora un poquito y retorna un número gigantesco
+print("4) 1) para n = 151’145.018: ", punto_4_1_no_recursivo(151145018))
