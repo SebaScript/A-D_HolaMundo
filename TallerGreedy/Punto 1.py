@@ -8,6 +8,9 @@ campo_de_lechugas = [
 ]
 
 def encontrar_camino_optimo(matriz):
+    if not matriz or len(matriz) != len(matriz[0]):
+        raise ValueError("La matriz debe ser no vacía y cuadrada.")
+
     n = len(matriz)
 
     dp = [[0] * n for _ in range(n)]
@@ -41,5 +44,10 @@ def encontrar_camino_optimo(matriz):
     
     return camino[::-1]
 
-camino_optimo = encontrar_camino_optimo(campo_de_lechugas)
-print("El camino más óptimo es:", camino_optimo)
+try:
+    camino_optimo = encontrar_camino_optimo(campo_de_lechugas)
+    print("El camino más óptimo es:", camino_optimo)
+except ValueError as e:
+    print("Error:", e)
+except Exception as e:
+    print("Se produjo un error inesperado:", e)
