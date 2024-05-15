@@ -5,19 +5,19 @@ def minDifference(arr, n):
     sumaArr = sum(arr)
 
     mitad_sum = sumaArr // 2
-    dp = [[False] * (mitad_sum + 1) for _ in range(n + 1)]
+    cache = [[False] * (mitad_sum + 1) for _ in range(n + 1)]
 
     for i in range(n + 1):
-       dp[i][0] = True
+       cache[i][0] = True
 
     for i in range(1, n + 1):
         for j in range(1, mitad_sum + 1):
-            dp[i][j] = dp[i-1][j]
+            cache[i][j] = cache[i-1][j]
             if arr[i-1] <= j:
-                dp[i][j] = dp[i][j] or dp[i-1][j-arr[i-1]]
+                cache[i][j] = cache[i][j] or cache[i-1][j-arr[i-1]]
     
     for j in range(mitad_sum, -1, -1):
-        if dp[n][j]:
+        if cache[n][j]:
             subset1 = j
             break
     
