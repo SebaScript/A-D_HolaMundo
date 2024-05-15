@@ -9,7 +9,7 @@ def sudoku_sumas(matriz, objetivo):
             if sum(matriz[row][col] for row in range(3)) != objetivo:
                 return False
         return True
-    
+
     for i in range(3):
         for j in range(3):
             if matriz[i][j] == 0:
