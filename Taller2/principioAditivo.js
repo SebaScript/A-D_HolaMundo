@@ -1,4 +1,5 @@
 export function principioAditivo(numeros) { 
+    // CORRECCION 5 - Cambiar for normal a for-of
     // Complejidad en tiempo de la función: O(n)
 
     let listaNumeros = numeros.split(",").map(numero => parseInt(numero)); 

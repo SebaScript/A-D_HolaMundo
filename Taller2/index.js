@@ -203,6 +203,7 @@ function validarListaNumeros(lista) {
 
 
 function validarRepeticionPermutacion(n, lista) {
+    // CORRECCION 3 - Cambiar for normal a for-of
     const numeros = lista.split(',');
     let suma = 0;
 

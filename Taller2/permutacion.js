@@ -1,6 +1,7 @@
 import { factorial } from "./factorial.js";
 
 export function permutacionRepetida(n, stringNum) { 
+    // CORRECCION 4 - Cambiar for normal a for-of
     // Complejidad en tiempo de la función: O(n**2)
     
     const numeros = stringNum.split(",").map(numero => parseInt(numero)); 

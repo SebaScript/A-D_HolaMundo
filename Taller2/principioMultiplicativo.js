@@ -1,4 +1,5 @@
 export function principioMultiplicativo(numerosMultiplicativo) { 
+    // CORRECCION 6 - Cambiar for normal a for-of
     // Complejidad en tiempo de la función: O(n)
 
     let listaNumeros = numerosMultiplicativo.split(",").map(numero => parseInt(numero)); 
