@@ -167,17 +167,34 @@ document.getElementById("btn_var_sin_rep").addEventListener('click', function va
 
 
 function validarInput(valor) {
+    // CORRECCION 1 - Reemplazar if innecesario
+    // if (valor.length > 3 || isNaN(valor) || !Number.isInteger(parseFloat(valor)) || parseFloat(valor) < 1) {
+    //     return False
+    // }
+    // return True
+
     return !(valor.length > 3 || isNaN(valor) || !Number.isInteger(parseFloat(valor)) || parseFloat(valor) < 1)
 };
 
 
-function validarListaNumeros(lista) {
-    const numeros = lista.split(',')
 
-    for (let i = 0; i < numeros.length; i++) {
-        const numero = numeros[i].trim()
-        if (!validarInput(numero)) {
-            return false
+function validarListaNumeros(lista) {
+    // CORRECCION 2 - Cambiar for normal a for-of
+    // const numeros = lista.split(',')
+
+    // for (let i = 0; i < numeros.length; i++) {
+    //     const numero = numeros[i].trim()
+    //     if (!validarInput(numero)) {
+    //         return false
+    //     }
+    // }
+    // return true;
+
+    const numeros = lista.split(',');
+
+    for (const numero of numeros) {
+        if (!validarInput(numero.trim())) {
+            return false;
         }
     }
 
@@ -186,14 +203,15 @@ function validarListaNumeros(lista) {
 
 
 function validarRepeticionPermutacion(n, lista) {
-    const numeros = lista.split(',')
-    let suma = 0
-    for (let i = 0; i < numeros.length; i++) {
-        console.log(suma)
-        const numero = parseInt(numeros[i].trim())
-        suma += numero
+    const numeros = lista.split(',');
+    let suma = 0;
+
+    for (const numero of numeros) {
+        console.log(suma);
+        const parsedNumero = parseInt(numero.trim());
+        suma += parsedNumero;
         if (suma > n) {
-            return false
+            return false;
         }
     }
 
